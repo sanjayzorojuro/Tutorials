@@ -1,0 +1,11 @@
+ //create a new branch
+
+git checkout -b name-of-branch
+git chechout --orphan new-branch-name   //selected branch ge push
+
+
+
+git status
+git add .
+git commit -m ""
+git push -u  

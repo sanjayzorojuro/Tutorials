@@ -1,0 +1,54 @@
+//coming into mongodb
+mongosh
+
+//comminginto database
+use name-of-database
+
+//to show the existing database
+show dbs
+
+//to show the tables in the database
+show tables
+
+//to create a table in the database 
+db.createCollection("name-of-the-table")
+
+//to insert into the table 
+db.students.insertOne({})
+db.students.insertMany([{},{},{}])
+
+//to print or to see the data in the databse
+db.students.find()
+db.students.find({name:"Adithya"})
+
+//to sort the values in the database  we use sort function.
+db.students.find().sort({name:1})       //here 1 stands for assending order and -1 stands for descending order
+db.students.find().sort({gpa:1})
+
+
+//if we want to access limited data then we use limit 
+db.students.find().limit(2)    //only first 2 rows will been shown
+db.students.find().sort({gpa:-1}).limit(2)
+
+
+//accessing the elements we required
+db.students.find({},{name:true,age:true})  //here we get all the names and age of the students who are there in the database
+
+
+//updating the elements
+db.students.updateOne({name:'Adithya'},{$set:{age:21,fulltime:false}})
+
+//updating elements by object
+db.students.updateOne({_id: ObjectId("qdqd54qd1qwd51qwasc5")},{$set:{name:'sudeep'}})
+
+
+//to delete a content in a table
+db.students.deleteOne({name:'adithya'})
+
+
+/to delete many data we use
+db.students.delteMany({age:{$exists:fasle}})   //this delete every data which does not have age attribute in it.
+
+
+
+

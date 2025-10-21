@@ -52,3 +52,80 @@ db.students.delteMany({age:{$exists:fasle}})   //this delete every data which do
 
 
 
+//comparision opperators
+db.students.find({name:{$ne:"adithya"}})    //this return all the names which is not spongbob.  notequal operator.
+db.studnets.find({ages:{$lt:10}})  //this return the age which is less than 10.
+eg:
+ne   -> not equal
+lt   -> less than
+lte  -> less than or equal to
+gt   -> greater than
+gte  -> greater than or equal to
+in   -> if exits or not eg:({name:{$in:['adi','nishan']}})
+nin  -> return all data where it doest have walue in the above example all the data will be returned except adi and Nishan.
+
+//to return the data which is in between some range 
+db.students.find({gpa:{$gte:3,$lte:4}})   // this return the data which is greater than 3 and less than 4.
+
+
+
+
+
+//logical operators
+
+and  -> used to check if two expression are true.
+eg>>>>> db.students.find({$and :[{fulltime:true},{age:{$lte:22}}]})
+
+
+or   -> used to check any one of the expression is true.
+eg>>>>> db.students.find({$or :[{fulltime:true},{age:{$lte:22}}]})
+
+
+nor  -> both of the condition should be false
+
+not  -> return any data which doesn't fit the condition.
+
+
+
+
+//indexex in mongo
+
+in mongo there is a .explain method which is used.
+eg:   db.students.find({name:"adi"}).explain("executionStats")
+
+to apply an index to a feild
+db.students.createIndex({name:1})  //so the name would be given as  name-1
+
+to get all indexed:
+db.students.getIndex()
+
+to drop a index:
+db.students.dropIndex("name_1")
+
+
+//collections
+
+ show collection.
+
+//creating a collections
+
+db.createCollection("teachers",{capped:true, size:1000000 , max:100},{autoIndexId:false})   /here capped:true it says that it should have the minimum size specified.  so here the max:100 specifies that we dont want more than 100 teachers in our collection.
+
+
+//to delete a collection we use 
+db.collection-name.drop()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,5 +1,5 @@
 Functions return in a server is called API.
-
+Flask is used to create api to run in server.
 Front-end is client and Server is backend.
 
 Flask is a lightweight where as jango is heavyweight so jango is used in business production.
@@ -85,18 +85,77 @@ so while returning we can send our custom page so that it shows same in all the 
 
 
 
+//2nd session.
+
+Render template
+# " dender " variable that is "_name__" double underscore special method in python.
+
+pipeline is the interface between client and api function.
+
+
+various error hander numbers:
+201->no respose
+200->success
+
+
+//json
+
+shell script data type is differnt from python so we cannot use lists,tuples and all and it will throw error so a global data type called json.
+json->java script object notation
 
 
 
+to convert the function or any data into Jason we use jasonify module 
+eg:  d=['1',"haery",5522]
+     return jasonify(d)
+
+in java the page(eg:index.html) name should be same as the public class name.
+
+in flask we use templates to store various html file we use templates because it is built in flask that we should use template folder other wise it might show error while fetching the html page.
+
+//sending data:
+
+java script runs in client side so its called front end language not backend.
+
+
+request :  accepting anything from html that is front end is accepted using request method.
+
+
+the request method is mainly used with args.
+
+
+Json.parse used to convert the jaon data into int ig.....
+
+
+to run Json and display data:
+curl -X GET -H "contentType: application/json" -d    '''-d represent data'''
+
+
+curl used to test the pipeline
+
+
+request.data.data1.to_dict()   //accessing the div data1 from parent div called data.
 
 
 
+d['j']=1   //if we assign like this then it will be like  d={'j':1}
+
+d[i]=d.get(i,0)+1  if there is d[i] in d then return i else 0.
+
+
+so the above all these sending data method is used to send the from the url.
 
 
 
+jinja
 
+while passing data we can send additional data using jinja 
+{{data}} {{lastname}}
 
+accessing variable in jinja {{}}
+for logical condition {% %}  {%  if d|int % 2 ==0  %}  //this convert the d to int then check for even numbers.
 
+in jinja we call fuctions as filters.
 
 
 

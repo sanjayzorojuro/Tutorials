@@ -8,7 +8,7 @@ API -> DNS server -> then calling API Function's name (192.7.co.bbwcubdcibw)
 
 Structure of Flask:
 templates -> HTML 
-app.py -> main Flask
+app.py -> main Flask 
 static -> js ,image,css.
 
 // installing Flask
